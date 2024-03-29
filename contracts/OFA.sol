@@ -31,7 +31,8 @@ contract OFAPrivate {
         bundleData = Bundle.encodeBundle(bundle).body;
 
         // Simulate the bundle and extract its score.
-        uint64 egp = Suave.simulateBundle(bundleData);
+        // TODO: fix this
+        // uint64 egp = Suave.simulateBundle(bundleData);
 
         // Extract a hint about this bundle that is going to be leaked
         // to external applications.
@@ -71,7 +72,7 @@ contract OFAPrivate {
         Suave.confidentialStore(
             dataRecord.id,
             "mevshare:v0:ethBundleSimResults",
-            abi.encode(egp)
+            abi.encode(1) // TODO: use `egp` here instead of `1`
         );
 
         HintOrder memory hintOrder;
