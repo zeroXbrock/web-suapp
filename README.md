@@ -1,66 +1,28 @@
-## Foundry
+# SUAVE Web Demo
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A web app that interacts with a SUAPP.
 
-Foundry consists of:
+**System Dependencies:**
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- [bun](https://bun.sh)
+- [foundry](https://getfoundry.sh)
+- [suave-geth devnet](https://github.com/flashbots/suave-geth/?tab=readme-ov-file#starting-a-local-devnet)
 
-## Documentation
+## Quickstart Example
 
-https://book.getfoundry.sh/
+1. Make sure you're running a suave-geth devnet on `http://localhost:8545`.
 
-## Usage
+2. Build smart contracts & install dependencies from NPM:
 
-### Build
+    ```bash
+    forge build
+    bun install
+    ```
 
-```shell
-$ forge build
-```
+3. Run the example:
 
-### Test
+    ```bash
+    bun run dev
+    ```
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+    This will launch a web demo hosted at [localhost:5173](http://localhost:5173), where you can get some testnet ether and send a "bid."
