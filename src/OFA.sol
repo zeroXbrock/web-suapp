@@ -3,7 +3,7 @@ pragma solidity ^0.8.8;
 
 import "suave-std/suavelib/Suave.sol";
 import {Bundle} from "suave-std/protocols/Bundle.sol";
-import "solady/src/utils/LibString.sol";
+import "lib/suave-std/lib/solady/src/utils/LibString.sol";
 
 contract OFAPrivate {
     // Struct to hold hint-related information for an order.
